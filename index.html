@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="index.css">
+    <title>Taskify</title>
+</head>
+<body>
+    <script src="index.js">
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    
+    
+    <header>
+        <nav>
+            <a href="#" id="Logo">Taskify</a>
+
+            <button type="button" class="btn btn-primary" id="add_button" data-bs-toggle="modal" data-bs-target="#AddCardModal">Add new +</button>
+            
+        </nav>
+    </header> 
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="AddCardModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" id="modal_header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+
+            <div class="modal-body" id="modal_body">
+            <label for="img_url">Add Image URL:</label><br>
+            <input type="text" id="img_url"><br><br>
+            
+            <label for="task_title">Title:</label><br>
+            <input type="text" id="task_title"><br><br>
+            
+            <label for="task_desc">Description:</label><br>
+            <input type="text" id="task_desc"><br><br>
+            </div>
+
+
+            <div class="modal-footer" id="modal_footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="addNewCard()">Save Changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <input type="search" id="search_bar" class="input-field" placeholder="&#x1F50E Search ">
+
+
+    <div id="card_container">
+
+        <!-- Sample Card -->
+    <div class="task_card">
+        <div class="task_head">
+            <h1>Title</h1>
+            <span><button>Edit</button> <button>Delete</button></span>
+        </div>
+        <div class="task_body">
+            <img src="https://static.nseindia.com/s3fs-public/2020-02/03-Intermediate-Modules_Web_banner.jpg" alt="Task Image" class="task_img">
+
+            <p class="task_para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, iste! Esse labore alias enim tenetur porro eaque doloremque cupiditate amet culpa laudantium? Est architecto et maiores aspernatur eveniet, sed voluptatem?
+
+            </p>
+
+        </div>
+
+        <div class="task_footer">
+        </div>
+    </div>
+    </div>
+
+    
+    <script>
+            
+        loadCards();
+        // const allCards = localStorage.getItem("TASKS");
+        // console.log("loadCards");
+        // console.log(allCards);
+    </script>
+
+    
+
+</body>
+</html>
